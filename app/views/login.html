@@ -1,0 +1,16 @@
+<div class="login">
+    <div class="welcome">
+        <p>欢迎您，我的朋友！这里是前端开发者乐园，这里有您想要的一切！</p>
+    </div>
+    <div class="content">
+        <label>请输入：</label>
+        <span text-directive></span>
+        <span class="content-description">才能进入哦！</span>
+    </div>
+    <div class="input-zilla">
+        <input type="text" class="it login-input" limit-input-directive ng-model="login.loginInput">
+    </div>
+    <div class="entering">
+        <button class="btn" login-directive on-click-login="runLogin(login)">进入</button>
+    </div>
+</div>
