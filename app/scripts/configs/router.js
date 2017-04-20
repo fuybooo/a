@@ -38,7 +38,15 @@ define(function (require) {
                     dependencies: [
                         'scripts/controllers/loginController',
                         'scripts/directives/loginDirective'
-                    ]
+                    ],
+                    resolve: {
+                        deps: ['uiLoad',
+                            function (uiLoad) {
+                                return uiLoad.load(
+                                    ['app/styles/login.css']
+                                );
+                            }]
+                    }
                 })
                 /*app*/
                 .state('app', {

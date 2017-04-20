@@ -6,7 +6,7 @@ define(
         'exports',
         'module'
     ],
-    function (angular, asyncLoader, require, exports, module) {
+    function(angular, asyncLoader, require, exports, module) {
         //console.info("创建angular项目启动模块app,初始化依赖项有'ui.router','ui.load','restangular','ngSanitize','ngAnimate','ngTouch','ui.bootstrap'...");
         /*var angular = require('angular');
          var asyncLoader = require('angular-async-loader');*/
@@ -36,30 +36,30 @@ define(
              * @param {Object} obj
              * @return {String}
              */
-            var param = function (obj) {
+            var param = function(obj) {
                 var query = '',
                     name, value, fullSubName, subName, subValue, innerObj, i;
 
-                for (name in obj) {
+                for(name in obj) {
                     value = obj[name];
 
-                    if (value instanceof Array) {
-                        for (i = 0; i < value.length; ++i) {
+                    if(value instanceof Array) {
+                        for(i = 0; i < value.length; ++i) {
                             subValue = value[i];
                             fullSubName = name + '[' + i + ']';
                             innerObj = {};
                             innerObj[fullSubName] = subValue;
                             query += param(innerObj) + '&';
                         }
-                    } else if (value instanceof Object) {
-                        for (subName in value) {
+                    } else if(value instanceof Object) {
+                        for(subName in value) {
                             subValue = value[subName];
                             fullSubName = name + '[' + subName + ']';
                             innerObj = {};
                             innerObj[fullSubName] = subValue;
                             query += param(innerObj) + '&';
                         }
-                    } else if (value !== undefined && value !== null)
+                    } else if(value !== undefined && value !== null)
                         query += encodeURIComponent(name) + '=' + encodeURIComponent(value) + '&';
                 }
 
@@ -68,8 +68,8 @@ define(
 
             //一个function数组，负责将请求的body，也就是post data，转换成想要的形式
             // Override $http service's default transformRequest
-            $httpProvider.defaults.transformRequest = [function (data) {
-                if (String(data) === '[object FormData]')return data;
+            $httpProvider.defaults.transformRequest = [function(data) {
+                if(String(data) === '[object FormData]') return data;
                 return angular.isObject(data) && String(data) !== '[object File]' ? param(data) : data;
             }];
             //数据请求的基础路径

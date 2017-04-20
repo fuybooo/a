@@ -1,16 +1,19 @@
-<div class="login">
-    <div class="welcome">
-        <p>欢迎您，我的朋友！这里是前端开发者乐园，这里有您想要的一切！</p>
+<div class="login-wrap h c-f tac">
+    <div class="login-welcome ">
+        <img src="app/images/A.png" alt="logo" />
+        <h1>欢迎来到前端开发者乐园！</h1>
     </div>
-    <div class="content">
-        <label>请输入：</label>
+    <div class="login-content mt30">
+        <p class="login-content-description">输入以下文字才能进入：</p>
         <span text-directive></span>
-        <span class="content-description">才能进入哦！</span>
     </div>
-    <div class="input-zilla">
+    <div class="login-input-zilla">
         <input type="text" class="it login-input" limit-input-directive ng-model="login.loginInput">
     </div>
-    <div class="entering">
+    <div class="login-entry">
         <button class="btn" login-directive on-click-login="runLogin(login)">进入</button>
+    </div>
+    <div class="footer">
+        <p>CopyRight 2017-2018</p>
     </div>
 </div>

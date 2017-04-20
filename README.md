@@ -1,14 +1,16 @@
-#trustdata
+#a
 
-云创远景门户
+#2017-04-20
+
+#学习经验总结项目
 
 ##项目环境
 
-#####requirejs + angularjs + gulp + bower + npm
+#####requirejs + angularjs + gulp + npm + karma
 
 ##目录结构
 
-    trustdata/
+    a/
     ├── app                                开发目录
     │   ├── images                         图片
     │   │   ├── logo.png
@@ -68,16 +70,10 @@
 
 ##使用说明
 
-#####1.项目环境，需先安装git，nodejs，bower
-#####2.项目从git服务器down下来后，通过终端进入到项目的当前目录: cd /trustdata
+#####1.项目环境，需先安装git，nodejs
+#####2.项目从git服务器down下来后，通过终端进入到项目的当前目录: cd /a
 #####3.执行相关命令：
-###### <1>.npm install
-###### <2>.bower install
-#####4.增加新的前端插件库
-###### <1>.bower install package --save
-#####5.增加新的后端插件库
-###### <1>.npm install package --save
+######npm install --save-dev 下载npm包
+######gulp 启动项目，可以在此基础上继续开发
+######karma start test/karma.conf.js 启动测试，可以执行测试
 
-##开发工具
-
-#####推荐webstorm，最新版是webstorm2016.2，该软件是收费的，请百度破解

@@ -1,0 +1,412 @@
+/* css init */
+
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+button,
+textarea,
+p,
+blockquote,
+th,
+td {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #fff;
+    color: #555;
+    font-size: 12px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+td,
+th,
+caption {
+    font-size: 12px;
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var {
+    font-style: normal;
+    font-weight: normal;
+}
+
+a {
+    color: #555;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+img {
+    border: none;
+}
+
+ol,
+ul,
+li {
+    list-style: none;
+}
+
+input,
+textarea,
+select,
+button {
+    font: 12px 微软雅黑;
+}
+
+table {
+    border-collapse: collapse;
+    cursor: default;
+}
+
+label {
+    font-weight: normal;
+    margin: 0;
+}
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+.clearfloat {
+    clear: both;
+}
+
+
+/* btn */
+
+.btn {
+    padding: 4px 12px;
+    display: inline-block;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.btn:focus,
+.btn:active:focus,
+.btn.active:focus,
+.btn.focus,
+.btn:active.focus,
+.btn.active.focus {
+    color: #fff;
+    outline: none;
+    outline-offset: 0px;
+}
+
+.btn.disabled,
+.btn[disabled],
+fieldset[disabled] .btn {
+    pointer-events: none;
+    cursor: not-allowed;
+    filter: alpha(opacity=65);
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    opacity: .65;
+}
+
+.btn+.btn {
+    margin-left: 6px;
+}
+
+
+/* input textarea */
+
+.it,
+.textarea {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding-left: 10px;
+    width: 182px;
+}
+
+.it {
+    height: 26px;
+    line-height: 26px;
+}
+
+.textarea {
+    height: 52px;
+    padding-top: 3px;
+    vertical-align: top;
+}
+
+.it:focus,
+.textarea:focus {
+    border-color: #66afe9;
+    outline: none;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6);
+}
+
+
+/* ie10 浏览器 */
+
+.it::-ms-clear,
+.it::-ms-reveal {
+    display: none;
+}
+
+
+/* chrome浏览器 */
+
+.it:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 30px white inset;
+    box-shadow: 0 0 0px 30px white inset;
+}
+
+
+/* radio checkbox */
+
+.ir,
+.ic {
+    vertical-align: sub;
+}
+
+
+/* file */
+
+input[type="file"] {
+    display: none;
+}
+
+.lh50 {
+    line-height: 50px;
+}
+
+.m0a {
+    margin: 0 auto;
+}
+
+.c-f {
+    color: #fff;
+}
+
+.c-f00 {
+    color: #f00;
+}
+
+.c-red {
+    color: #f00;
+}
+
+.cp {
+    cursor: pointer;
+}
+
+
+/* css tools */
+
+
+/*  对于数量单位有如下规则   */
+
+
+/*  1.数字单位为px，如w20表示width: 20px;  */
+
+
+/*  2.下划线代表百分比，如w_90表示width: 90%;  */
+
+
+/*  3.中划线代表负值，如w-100表示width: -100px;  */
+
+
+/*  4.综合：w-_100表示width: -100%;  */
+
+
+/*  5.特例：因为比较常用的关系，w表示width: 100%;等等  */
+
+.f14 {
+    font-size: 14px;
+}
+
+.f16 {
+    font-size: 16px;
+}
+
+.f20 {
+    font-size: 20px;
+}
+
+.tac {
+    text-align: center;
+}
+
+.tal {
+    text-align: left;
+}
+
+.tar {
+    text-align: right;
+}
+
+.w {
+    width: 100%;
+}
+
+.w18 {
+    width: 18px;
+}
+
+.w260 {
+    width: 260px;
+}
+
+.w480 {
+    width: 480px;
+}
+
+.h {
+    height: 100%;
+}
+
+.h18 {
+    height: 18px;
+}
+
+.h50 {
+    height: 50px;
+}
+
+.h70 {
+    height: 70px;
+}
+
+.h100 {
+    height: 100px;
+}
+
+.dn {
+    display: none;
+}
+
+.db {
+    display: block;
+}
+
+.oh {
+    overflow: hidden;
+}
+
+.pa {
+    position: absolute;
+}
+
+.pr {
+    position: relative;
+}
+
+.pf {
+    position: fixed;
+}
+
+.t_50 {
+    top: 50%;
+}
+
+.r {}
+
+.b0 {
+    bottom: 0;
+}
+
+.l100 {
+    left: 100px;
+}
+
+.mt30 {
+    margin-top: 30px;
+}
+.mt-35 {
+    margin-top: -35px;
+}
+
+.mr {}
+
+.mb {}
+
+.ml100 {
+    margin-left: 100px;
+}
+
+.ml298 {
+    margin-left: 298px;
+}
+
+.ml356 {
+    margin-left: 356px;
+}
+
+.pt40 {
+    padding-top: 40px;
+}
+
+.pt100 {
+    padding-top: 100px;
+}
+
+
+/* pr已经被占用，这时加上第二个字母以示区分 */
+
+.pri {}
+
+.pb40 {
+    padding-bottom: 40px;
+}
+
+.pb50 {
+    padding-bottom: 50px;
+}
+
+.pl356 {
+    padding-left: 356px;
+}

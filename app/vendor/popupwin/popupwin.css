@@ -1,0 +1,131 @@
+.popupwin-bg{
+    display: none;
+    position: fixed; 
+    height: 100%;
+    width: 100%;
+    background-color: #000;
+    filter: alpha(opacity=60);
+    opacity: 0.6;
+    top: 0;
+    left: 0; 
+}
+.popupwin{
+    display: none;
+    background-color: #fff;
+    position: absolute;
+    padding: 0;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 0 10px rgba(0,0,0,.4);
+            box-shadow: 0 0 10px rgba(0,0,0,.4);
+    /* 未知宽度 水平居中 */
+    left: 50%;
+    transform:translate(-50%);
+    -ms-transform:translate(-50%);
+    -moz-transform:translate(-50%);
+    -webkit-transform:translate(-50%);
+}
+@media (max-height:720px){
+    .popupwin{
+        top: 70px;
+    }
+}
+@media (max-height:600px){
+    .popupwin{
+        top: 50px;
+    }
+}
+.pw-header{
+    padding: 6px;
+    padding-left: 10px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    font-size: 14px;
+    background-color: #1B91F5;
+    color: #fff;
+}
+.pw-logo{
+    position: absolute;
+    cursor: default;
+    background: url(logo.ico);
+    background-size: cover;
+    width: 18px;
+    height: 18px;
+    left: 6px;
+    top: 6px;
+}
+.pw-title{
+    font-family: "微软雅黑";
+}
+.pw-close{
+    position: absolute;
+    width: 18px;
+    font-size: 18px;
+    line-height: 1;
+    top: 6px;
+    right: 6px;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+}
+.pw-close:hover{
+    color: #fff;
+    opacity: 0.8;
+    filter: alpha(opacity=80);
+}
+.pw-body{
+    padding: 10px;
+}
+.pw-body-img-box{
+    height: 80px;
+    position: relative;
+}
+.pw-body-img{
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    left: 50%;
+    margin-left: -30px;
+}
+.pw-error-img{
+    background:url(error.png);
+}
+
+.pw-question-img{
+    background:url(question.png);
+}
+
+.pw-success-img{
+    background:url(success.png);
+}
+
+.pw-warning-img{
+    background:url(warning.png);
+}
+.pw-body-text{
+    text-align: center;
+}
+.pw-footer{
+    padding-bottom: 10px;
+    padding-right: 10px;
+    text-align: right;
+}
+.info-ul li{
+    margin-bottom: 5px;
+}
+.info-ul label{
+    display: inline-block;
+    width: 58px;
+}
+.alertMsg{
+    position: absolute;
+    top:70px;
+    left:50%;
+    z-index: 999002;
+    transform:translate(-50%);
+    -ms-transform:translate(-50%);
+    -moz-transform:translate(-50%);
+    -webkit-transform:translate(-50%);
+    -o-transform:translate(-50%);
+}

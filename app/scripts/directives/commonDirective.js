@@ -1,13 +1,14 @@
-define(function (require) {
+define(function(require) {
     var app = require('app');
-    app.directive('textDirective', function(){
+    app.directive('textDirective', function() {
         return {
             restrict: 'A',
             replace: true,
-            template: '<span id="login-limit-text">' + getLoginText() + '</span>'
-        }
+            template: '<p class="login-limit-text f20">' + getLoginText() + '</p>'
+        };
     });
-    function getLoginText(){
+
+    function getLoginText() {
         var arr = [
             '我要好好学习',
             '学习是光荣的',
