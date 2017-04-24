@@ -4,7 +4,7 @@ define(function(require) {
         return {
             restrict: 'A',
             replace: true,
-            template: '<p class="login-limit-text f20">' + getLoginText() + '</p>'
+            template: '<p class="login-limit-text text-danger f20">' + getLoginText() + '</p>'
         };
     });
 

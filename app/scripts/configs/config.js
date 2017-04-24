@@ -27,6 +27,9 @@ require.config({
         // app文件
         'app': 'scripts/configs/app',
         'commonDirective': 'scripts/directives/commonDirective',
+        'commonService': 'scripts/services/commonService',
+        'commonFilter': 'scripts/filters/commonFilter',
+        'dataService': 'scripts/services/dataService',
         'router': 'scripts/configs/router'
     },
     shim: {
@@ -137,6 +140,9 @@ require(
 
         'app',
         'commonDirective',
+        'commonService',
+        'dataService',
+        'commonFilter',
         'router',
 
         'require',

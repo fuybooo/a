@@ -8,8 +8,6 @@ define(function (require) {
         /*返回上一页：（当前定的打开新窗口问题太多，比如详情页面什么时机关闭，等等。。。 单页应用SPA，除非必要不应该去打开太多窗口。）
          * 参数传递：1.rootScope变量，2事件机制。
          * */
-        $rootScope.$state = $state;
-        $rootScope.$stateParams = $stateParams;
         $rootScope.$on("$stateChangeSuccess", function (event, toState, toParams, fromState, fromParams) {
             // to be used for back button //won't work when page is reloaded.
             $rootScope.previousState_name = fromState.name;
@@ -68,6 +66,19 @@ define(function (require) {
                         'scripts/controllers/dashboardController',
                         'scripts/directives/dashboardDirective'
                     ]
+                })
+                .state('app.oa', {
+                    url: '/oa',
+                    templateUrl: 'app/views/oa.html',
+                    controller: 'OaController',
+                    dependencies: [
+                        'scripts/controllers/oaController',
+                        'scripts/directives/oaDirective'
+                    ]
+                })
+                .state('app.bootstrap', {
+                    url: '/bootstrap',
+                    templateUrl: 'test/ui-test/bootstrap-detail.html'
                 })
             ;
         $urlRouterProvider.otherwise('login');

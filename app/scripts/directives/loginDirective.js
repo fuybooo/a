@@ -5,13 +5,13 @@ define(function(require) {
             return {
                 controller: 'LoginController',
                 link: function(scope, ele, attrs) {
-                    console.log('limitInputDirective');
-                    var loginText = $('#login-limit-text').text();
+                    scope.loginText = $('.login-limit-text').text();
+                    console.log('limitInputDirective', scope.loginText);
                     scope.watchCounter = 0;
                     scope.keyUpCounter = 0;
                     scope.$watch('login.loginInput', function(newVal, oldVal) {
                         if(newVal) {
-                            if(loginText.indexOf(newVal) === 0) {
+                            if(scope.loginText.indexOf(newVal) === 0) {
                                 scope.watchCounter++;
                             }
                         }

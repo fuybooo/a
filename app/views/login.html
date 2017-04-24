@@ -1,19 +1,21 @@
-<div class="login-wrap h c-f tac">
-    <div class="login-welcome ">
-        <img src="app/images/A.png" alt="logo" />
-        <h1>欢迎来到前端开发者乐园！</h1>
-    </div>
-    <div class="login-content mt30">
-        <p class="login-content-description">输入以下文字才能进入：</p>
-        <span text-directive></span>
-    </div>
-    <div class="login-input-zilla">
-        <input type="text" class="it login-input" limit-input-directive ng-model="login.loginInput">
-    </div>
-    <div class="login-entry">
-        <button class="btn" login-directive on-click-login="runLogin(login)">进入</button>
-    </div>
-    <div class="footer">
-        <p>CopyRight 2017-2018</p>
-    </div>
+<div class="login-wrap h c-f text-center container-fluid">
+    <ul class="list-unstyled login-wrap-ul">
+    	<li class=" login-welcome ">
+    	    <img src="app/images/A.png " alt="logo " />
+            <h1>欢迎来到前端开发者乐园！</h1>
+    	</li>
+    	<li class="login-content mt30 ">
+    	    <p class="login-content-description ">输入以下文字才能进入：</p>
+            <span text-directive></span>
+    	</li>
+    	<li class="login-input-zilla ">
+    	    <input type="text " class="form-control login-input " limit-input-directive ng-model="login.loginInput " placeholder="请输入提示的文字">
+    	</li>
+    	<li class="login-entry ">
+    	    <button class="btn btn-danger btn-block " login-directive on-click-login="runLogin(login) ">进入</button>
+    	</li>
+    	<li class="footer ">
+    	    <p>CopyRight 2017-2018</p>
+    	</li>
+    </ul>
 </div>

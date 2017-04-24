@@ -5,9 +5,10 @@
  * 
  * 使用方法：
  *  var pop = require('popupwin');
- *  var registPop = Popup.create({
+ *  var registPop = pop.create({
  *                      title: '注册',
  *                      htmlUrl: 'regist',
+ *                      html: '<..>'
  *                      cls: 'regist',
  *                      width: 600,
  *                      isOkOnly: true,
@@ -44,7 +45,7 @@ define(function(require){
         cls: '', // 弹出层的类名
         isOkOnly: false, // 只有确定按钮
         isCancelOnly: false, // 只有取消按钮
-        title: '弹出窗口', // 弹出窗标题
+        title: '温馨提示', // 弹出窗标题
         top: 100,
         width: 400
     };

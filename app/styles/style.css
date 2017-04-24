@@ -1,0 +1,25 @@
+.alert-global-tip{
+    display: none;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+}
+.nav-header{
+    color: #F3F3F3;
+}
+.nav-header div{
+    height: 50px;
+    line-height: 50px;
+}
+.nav-logo{
+    background: url(../images/A.png) no-repeat;
+    background-size: contain;
+    background-position-x: 50px;
+    padding-left: 100px;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 0.2em;
+    -webkit-user-select: none;
+}

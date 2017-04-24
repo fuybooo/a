@@ -1,0 +1,752 @@
+<div>
+	<p>简单灵活可以架构流行的用户界面和交互接口的前端开发工具集</p>
+	<p>兼容性，响应式</p>
+	<p>参见bootstrap-ui</p>
+	
+	<ul>
+		<li>移除body的margin声明</li>
+		<li>设置body的背景色为白色</li>
+		<li>为排版设置了基本的字体、字号和行高</li>
+		<li>设置全局链接颜色，且当链接处于悬浮“:hover”状态时才会显示下划线样式</li>
+	</ul>
+	
+	<p>标题</p>
+	1、重新设置了margin-top和margin-bottom的值，  h1~h3重置后的值都是20px；h4~h6重置后的值都是10px。
+    2、所有标题的行高都是1.1（也就是font-size的1.1倍）,而且文本颜色和字体都继承父元素的颜色和字体。
+    3、固定不同级别标题字体大小，h1=36px，h2=30px，h3=24px，h4=18px，h5=14px和h6=12px。
+    
+    <!--Bootstrap中的标题-->
+    <h1>Bootstrap标题一</h1>
+    <h2>Bootstrap标题二</h2>
+    <h3>Bootstrap标题三</h3>
+    <h4>Bootstrap标题四</h4>
+    <h5>Bootstrap标题五</h5>
+    <h6>Bootstrap标题六</h6>
+    
+    <!--Bootstrap中让非标题元素和标题使用相同的样式-->
+    <div class="h1">Bootstrap标题一</div>
+    <div class="h2">Bootstrap标题二</div>
+    <div class="h3">Bootstrap标题三</div>
+    <div class="h4">Bootstrap标题四</div>
+    <div class="h5">Bootstrap标题五</div>
+    <div class="h6">Bootstrap标题六</div>
+    
+    <p>副标题</p>
+    <!--Bootstrap中使用了<small>标签来制作副标题-->
+    <h1>Bootstrap标题一<small>我是副标题</small></h1>
+    <h2>Bootstrap标题二<small>我是副标题</small></h2>
+    <h3>Bootstrap标题三<small>我是副标题</small></h3>
+    <h4>Bootstrap标题四<small>我是副标题</small></h4>
+    <h5>Bootstrap标题五<small>我是副标题</small></h5>
+    <h6>Bootstrap标题六<small>我是副标题</small></h6>
+    
+    <p>段落</p>
+    1、全局文本字号为14px(font-size)。
+
+    2、行高为1.42857143（line-height），大约是20px(大家看到一串的小数或许会有疑惑，其实他是通过LESS编译器计算出来的，当然Sass也有这样的功能)。
+    
+    3、颜色为深灰色（#333）；
+    
+    4、字体为"Helvetica Neue", Helvetica, Arial, sans-serif;（font-family）
+    
+    <p>强调</p>
+    .text-muted：提示，使用浅灰色（#999）
+    .text-primary：主要，使用蓝色（#428bca）
+    .text-success：成功，使用浅绿色(#3c763d)
+    .text-info：通知信息，使用浅蓝色（#31708f）
+    .text-warning：警告，使用黄色（#8a6d3b）
+    .text-danger：危险，使用褐色（#a94442）
+    <div class="text-muted">.text-muted 效果</div>
+    <div class="text-primary">.text-primary效果</div>
+    <div class="text-success">.text-success效果</div>
+    <div class="text-info">.text-info效果</div>
+    <div class="text-warning">.text-warning效果</div>
+    <div class="text-danger">.text-danger效果</div>
+    
+    <p>对齐</p>
+      ☑   .text-left：左对齐
+
+      ☑   .text-center：居中对齐
+    
+      ☑   .text-right：右对齐
+    
+      ☑   .text-justify：两端对齐
+    <p class="text-left">我居左</p>
+    <p class="text-center">我居中</p>
+    <p class="text-right">我居右</p>
+    <p class="text-justify">There is clearly a need for CSS to be taken seriously by graphic artists. The Zen Garden aims to excite, inspire, and encourage participation. To begin, view some of the existing designs in the list. Clicking on any one will load the style sheet into this very page. The code remains the same, the only thing that has changed is the external .css file. </p>
+
+    <p>列表</p>
+    <p>去点列表</p>
+    .list-unstyled {
+        padding-left: 0;
+        list-style: none;
+        }
+    <ul class="list-unstyled">
+    <li>不带项目符号</li>
+    <li>不带项目符号</li>
+    </ul>
+    <p>内联列表</p>
+    .list-inline {
+padding-left: 0;
+margin-left: -5px;
+list-style: none;
+}
+.list-inline > li {
+display: inline-block;
+padding-right: 5px;
+padding-left: 5px;
+}
+<ul class="list-inline">
+    <li>W3cplus</li>
+    <li>Blog</li>
+    <li>CSS3</li>
+    <li>jQuery</li>
+    <li>PHP</li>
+</ul>
+<p>定义列表</p>
+dl {
+margin-top: 0;
+margin-bottom: 20px;
+}
+dt,
+dd {
+line-height: 1.42857143;
+}
+dt {
+font-weight: bold;
+}
+dd {
+margin-left: 0;
+}
+
+<dl>
+    <dt>W3cplus</dt>
+    <dd>一个致力于推广国内前端行业的技术博客</dd>
+    <dt>慕课网</dt>
+    <dd>一个真心在做教育的网站</dd>
+</dl>
+
+<p>水平定义列表</p>
+@media (min-width: 768px) {
+.dl-horizontal dt {
+float: left;
+width: 160px;
+overflow: hidden;
+clear: left;
+text-align: right;
+text-overflow: ellipsis;
+white-space: nowrap;
+  }
+.dl-horizontal dd {
+margin-left: 180px;
+  }
+}
+<dl class="dl-horizontal">
+    <dt>W3cplus</dt>
+    <dd>一个致力于推广国内前端行业的技术博客。它以探索为己任，不断活跃在行业技术最前沿，努力提供高质量前端技术博文</dd>
+    <dt>慕课网</dt>
+    <dd>一个专业的，真心实意在做培训的网站</dd>
+    <dt>我来测试一个标题，我来测试一个标题</dt>
+    <dd>我在写一个水平定义列表的效果，我在写一个水平定义列表的效果</dd>
+</dl>
+<p>代码</p>
+1、&lt;code&gt;：一般是针对于单个单词或单个句子的代码
+2、&lt;pre&gt;：一般是针对于多行代码（也就是成块的代码）
+3、&lt;kbd&gt;:一般是表示用户要通过键盘输入的内容
+    code风格：
+<div>Bootstrap的代码风格有三种：<code>&lt;code&gt;</code>、<code>&lt;pre&gt;</code>和<code>&lt;kbd&gt;</code></div>
+pre风格：
+<div>
+<pre>
+&lt;ul&gt;
+&lt;li&gt;...&lt;/li&gt;
+&lt;li&gt;...&lt;/li&gt;
+&lt;li&gt;...&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+</div>
+kbd风格：
+<div>请输入<kbd>ctrl+c</kbd>来复制代码，然后使用<kbd>ctrl+v</kbd>来粘贴代码</div>
+<p>限制代码高度</p>
+.pre-scrollable {
+max-height: 340px;
+overflow-y: scroll;
+}
+<pre class="pre-scrollable">
+<ol>
+    <li>....</li>
+    <li>....</li>
+    <li>....</li>
+    <li>....</li>
+    <li>....</li>
+    <li>....</li>
+    <li>....</li>
+    <li>....</li>
+    <li>....</li>
+    <li>....</li>
+    <li>....</li>
+    <li>....</li>
+    <li>....</li>
+    <li>....</li>
+</ol>
+</pre>
+
+<p>表格</p>
+  ☑  .table：基础表格
+
+  ☑  .table-striped：斑马线表格
+
+  ☑  .table-bordered：带边框的表格
+
+  ☑  .table-hover：鼠标悬停高亮的表格
+
+  ☑  .table-condensed：紧凑型表格
+
+  ☑  .table-responsive：响应式表格
+  <h1>基础表格</h1>
+<table class="table">
+   <thead>
+     <tr>
+       <th>表格标题</th>
+       <th>表格标题</th>
+       <th>表格标题</th>
+     </tr>
+   </thead>
+   <tbody>
+     <tr>
+       <td>表格单元格</td>
+       <td>表格单元格</td>
+       <td>表格单元格</td>
+     </tr>
+     <tr>
+       <td>表格单元格</td>
+       <td>表格单元格</td>
+       <td>表格单元格</td>
+     </tr>
+   </tbody>
+ </table>
+<h1>斑马线表格</h1>
+<table class="table table-striped">
+   <thead>
+     <tr>
+       <th>表格标题</th>
+       <th>表格标题</th>
+       <th>表格标题</th>
+     </tr>
+   </thead>
+   <tbody>
+     <tr>
+       <td>表格单元格</td>
+       <td>表格单元格</td>
+       <td>表格单元格</td>
+     </tr>
+     <tr>
+       <td>表格单元格</td>
+       <td>表格单元格</td>
+       <td>表格单元格</td>
+     </tr>
+     <tr>
+       <td>表格单元格</td>
+       <td>表格单元格</td>
+       <td>表格单元格</td>
+     </tr>
+     <tr>
+       <td>表格单元格</td>
+       <td>表格单元格</td>
+       <td>表格单元格</td>
+     </tr>
+   </tbody>
+ </table>
+<h1>带边框的表格</h1>
+ <table class="table table-bordered">
+   <thead>
+     <tr>
+       <th>表格标题</th>
+       <th>表格标题</th>
+       <th>表格标题</th>
+     </tr>
+   </thead>
+   <tbody>
+     <tr>
+       <td>表格单元格</td>
+       <td>表格单元格</td>
+       <td>表格单元格</td>
+     </tr>
+     <tr>
+       <td>表格单元格</td>
+       <td>表格单元格</td>
+       <td>表格单元格</td>
+     </tr>
+     <tr>
+       <td>表格单元格</td>
+       <td>表格单元格</td>
+       <td>表格单元格</td>
+     </tr>
+     <tr>
+       <td>表格单元格</td>
+       <td>表格单元格</td>
+       <td>表格单元格</td>
+     </tr>
+   </tbody>
+ </table>
+<h1>鼠标悬浮高亮的表格</h1>
+<table class="table table-striped table-bordered table-hover">
+   <thead>
+     <tr>
+       <th>表格标题</th>
+       <th>表格标题</th>
+       <th>表格标题</th>
+     </tr>
+   </thead>
+   <tbody>
+     <tr>
+       <td>表格单元格</td>
+       <td>表格单元格</td>
+       <td>表格单元格</td>
+     </tr>
+     <tr>
+       <td>表格单元格</td>
+       <td>表格单元格</td>
+       <td>表格单元格</td>
+     </tr>
+     <tr>
+       <td>表格单元格</td>
+       <td>表格单元格</td>
+       <td>表格单元格</td>
+     </tr>
+     <tr>
+       <td>表格单元格</td>
+       <td>表格单元格</td>
+       <td>表格单元格</td>
+     </tr>
+   </tbody>
+ </table>
+ <h1>紧凑型表格</h1>
+  <table class="table table-condensed">
+   <thead>
+     <tr>
+       <th>表格标题</th>
+       <th>表格标题</th>
+       <th>表格标题</th>
+     </tr>
+   </thead>
+   <tbody>
+     <tr>
+       <td>表格单元格</td>
+       <td>表格单元格</td>
+       <td>表格单元格</td>
+     </tr>
+     <tr>
+       <td>表格单元格</td>
+       <td>表格单元格</td>
+       <td>表格单元格</td>
+     </tr>
+     <tr>
+       <td>表格单元格</td>
+       <td>表格单元格</td>
+       <td>表格单元格</td>
+     </tr>
+     <tr>
+       <td>表格单元格</td>
+       <td>表格单元格</td>
+       <td>表格单元格</td>
+     </tr>
+   </tbody>
+ </table>
+ <h1>响应式表格</h1>
+ <div class="table-responsive">
+   <table class="table table-bordered">
+   <thead>
+     <tr>
+       <th>表格标题</th>
+       <th>表格标题</th>
+       <th>表格标题</th>
+     </tr>
+   </thead>
+   <tbody>
+     <tr>
+       <td>表格单元格</td>
+       <td>表格单元格</td>
+       <td>表格单元格</td>
+     </tr>
+     <tr>
+       <td>表格单元格</td>
+       <td>表格单元格</td>
+       <td>表格单元格</td>
+     </tr>
+     <tr>
+       <td>表格单元格</td>
+       <td>表格单元格</td>
+       <td>表格单元格</td>
+     </tr>
+     <tr>
+       <td>表格单元格</td>
+       <td>表格单元格</td>
+       <td>表格单元格</td>
+     </tr>
+   </tbody>
+ </table>
+ 
+ <p>表格行</p>
+ <table class="table table-bordered table-hover">
+  <thead>
+    <tr>
+      <th>类名</th>
+      <th>描述</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="active">
+      <td>.active</td>
+      <td>表示当前活动的信息</td>
+    </tr>
+    <tr class="success">
+      <td>.success</td>
+      <td>表示成功或者正确的行为</td>
+    </tr>
+    <tr class="info">
+      <td>.info</td>
+      <td>表示中立的信息或行为</td>
+    </tr>
+    <tr class="warning">
+      <td>.warning</td>
+      <td>表示警告，需要特别注意</td>
+    </tr>
+    <tr class="danger">
+      <td>.danger</td>
+      <td>表示危险或者可能是错误的行为</td>
+    </tr>
+  </tbody>
+</table> 
+<p>表单</p>
+当然表单除了这几个元素之外，还有input、select、textarea等元素，在Bootstrap框架中，通过定制了一个类名`form-control`，也就是说，如果这几个元素使用了类名“form-control”，将会实现一些设计上的定制效果。
+
+1、宽度变成了100%
+
+2、设置了一个浅灰色（#ccc）的边框
+
+3、具有4px的圆角
+
+4、设置阴影效果，并且元素得到焦点之时，阴影和边框效果会有所变化
+
+5、设置了placeholder的颜色为#999
+<form role="form">
+  <div class="form-group">
+    <label for="exampleInputEmail1">邮箱：</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="请输入您的邮箱地址">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">密码</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="请输入您的邮箱密码">
+  </div>
+  <div class="checkbox">
+    <label>
+      <input type="checkbox"> 记住密码
+    </label>
+  </div>
+  <button type="submit" class="btn btn-default">进入邮箱</button>
+</form> 
+<p>水平表单</p>
+在Bootstrap框架中要实现水平表单效果，必须满足以下两个条件：
+1、在<form>元素是使用类名“form-horizontal”。
+2、配合Bootstrap框架的网格系统。（网格布局会在以后的章节中详细讲解）
+
+在<form>元素上使用类名“form-horizontal”主要有以下几个作用：
+1、设置表单控件padding和margin值。
+2、改变“form-group”的表现形式，类似于网格系统的“row”。
+<form class="form-horizontal" role="form">
+  <div class="form-group">
+    <label for="inputEmail3" class="col-sm-2 control-label">邮箱</label>
+    <div class="col-sm-10">
+      <input type="email" class="form-control" id="inputEmail3" placeholder="请输入您的邮箱地址">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="inputPassword3" class="col-sm-2 control-label">密码</label>
+    <div class="col-sm-10">
+      <input type="password" class="form-control" id="inputPassword3" placeholder="请输入您的邮箱密码">
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <div class="checkbox">
+        <label>
+          <input type="checkbox"> 记住密码
+        </label>
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <button type="submit" class="btn btn-default">进入邮箱</button>
+    </div>
+  </div>
+</form>
+<p>复选框和单选框</p>
+Bootstrap框架中checkbox和radio有点特殊，Bootstrap针对他们做了一些特殊化处理，主要是checkbox和radio与label标签配合使用会出现一些小问题（最头痛的是对齐问题）。使用Bootstrap框架，开发人员无需考虑太多，只需要按照下面的方法使用即可。
+<form role="form">
+  <h3>案例1</h3>
+  <div class="checkbox">
+    <label>
+      <input type="checkbox" value="">
+      记住密码
+    </label>
+  </div>
+  <div class="radio">
+    <label>
+      <input type="radio" name="optionsRadios" id="optionsRadios1" value="love" checked>
+      喜欢
+    </label>
+  </div>
+    <div class="radio">
+    <label>
+      <input type="radio" name="optionsRadios" id="optionsRadios2" value="hate">
+      不喜欢
+    </label>
+  </div>
+
+  
+</form>  
+<p>水平单选框复选框</p>
+有时候，为了布局的需要，将复选框和单选按钮需要水平排列。Bootstrap框架也做了这方面的考虑：
+1、如果checkbox需要水平排列，只需要在label标签上添加类名“checkbox-inline”
+2、如果radio需要水平排列，只需要在label标签上添加类名“radio-inline”
+<form role="form">
+  <div class="form-group">
+    <label class="checkbox-inline">
+      <input type="checkbox"  value="option1">游戏
+    </label>
+    <label class="checkbox-inline">
+      <input type="checkbox"  value="option2">摄影
+    </label>
+    <label class="checkbox-inline">
+    <input type="checkbox"  value="option3">旅游
+    </label>
+  </div>
+  <div class="form-group">
+    <label class="radio-inline">
+      <input type="radio"  value="option1" name="sex">男性
+    </label>
+    <label class="radio-inline">
+      <input type="radio"  value="option2" name="sex">女性
+    </label>
+    <label class="radio-inline">
+      <input type="radio"  value="option3" name="sex">中性
+    </label>
+  </div>
+</form>
+<p>按钮简介</p>
+<table class="table table-bordered table-striped">  
+    <thead>  
+      <tr>  
+        <th>Button</th>  
+        <th>class=""</th>  
+        <th>Description</th>  
+      </tr>  
+    </thead>  
+    <tbody>  
+      <tr>  
+        <td><button class="btn" href="#">Default</button></td>  
+        <td><code>btn</code></td>  
+        <td>Standard gray button with gradient</td>  
+      </tr>  
+      <tr>  
+        <td><button class="btn btn-primary" href="#">Primary</button></td>  
+        <td><code>btn btn-primary</code></td>  
+        <td>Provides extra visual weight and identifies the primary action in a set of buttons</td>  
+      </tr>  
+      <tr>  
+        <td><button class="btn btn-info" href="#">Info</button></td>  
+        <td><code>btn btn-info</code></td>  
+        <td>Used as an alternative to the default styles</td>  
+      </tr>  
+      <tr>  
+        <td><button class="btn btn-success" href="#">Success</button></td>  
+        <td><code>btn btn-success</code></td>  
+        <td>Indicates a successful or positive action</td>  
+      </tr>  
+      <tr>  
+        <td><button class="btn btn-warning" href="#">Warning</button></td>  
+        <td><code>btn btn-warning</code></td>  
+        <td>Indicates caution should be taken with this action</td>  
+      </tr>  
+      <tr>  
+        <td><button class="btn btn-danger" href="#">Danger</button></td>  
+        <td><code>btn btn-danger</code></td>  
+        <td>Indicates a dangerous or potentially negative action</td>  
+      </tr>  
+      <tr>  
+        <td><button class="btn btn-inverse" href="#">Inverse</button></td>  
+        <td><code>btn btn-inverse</code></td>  
+        <td>Alternate dark gray button, not tied to a semantic action or use</td>  
+      </tr>  
+    </tbody>  
+  </table>   
+  <p>控制表单大小</p>
+  <h1>案例1</h1>
+<form role="form">
+  <div class="form-group">
+    <label class="control-label">控件变大</label>
+    <input class="form-control input-lg" style="height:80px;" type="text" placeholder="添加.input-lg，控件变大">
+  </div>
+  <div class="form-group">
+    <label class="control-label">正常大小</label>
+    <input class="form-control" type="text" placeholder="正常大小">
+  </div>  
+  <div class="form-group">
+    <label class="control-label">控件变小</label>
+    <input class="form-control input-sm" type="text" placeholder="添加.input-sm，控件变小">
+  </div> 
+</form> 
+  <br>
+  <br>
+  <br>
+ <h1>案例2</h1>
+<form role="form" class="form-horizontal">
+  <div class="form-group">
+    <div class="col-xs-4">
+      <input class="form-control input-lg" type="text" placeholder=".col-xs-4">
+    </div>
+    <div class="col-xs-4">
+      <input class="form-control input-lg" type="text" placeholder=".col-xs-4">
+    </div>
+    <div class="col-xs-4">
+      <input class="form-control input-lg" type="text" placeholder=".col-xs-4">
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-xs-6"><input class="form-control" type="text" placeholder=".col-xs-6"></div>
+    <div class="col-xs-6"><input class="form-control" type="text" placeholder=".col-xs-6"></div>
+    
+  </div>  
+  <div class="form-group">
+    <div class="col-xs-5">
+      <input class="form-control input-sm" type="text" placeholder=".col-xs-5">
+    </div>
+    <div class="col-xs-7">
+      <input class="form-control input-sm" type="text" placeholder=".col-xs-7">
+    </div>
+  </div> 
+</form>
+<p>表单状态--禁用</p>
+Bootstrap框架的表单控件的禁用状态和普通的表单禁用状态实现方法是一样的，在相应的表单控件上添加属性“disabled”。
+<p>表单状态--验证</p>
+在制作表单时，不免要做表单验证。同样也需要提供验证状态样式，在Bootstrap框架中同样提供这几种效果。
+1、.has-warning:警告状态（黄色）
+2、.has-error：错误状态（红色）
+3、.has-success：成功状态（绿色）
+<h3>示例1</h3>
+<form role="form">
+  <div class="form-group has-success">
+    <label class="control-label" for="inputSuccess1">成功状态</label>
+    <input type="text" class="form-control" id="inputSuccess1" placeholder="成功状态" >
+  </div>
+  <div class="form-group has-warning">
+    <label class="control-label" for="inputWarning1">警告状态</label>
+    <input type="text" class="form-control" id="inputWarning1" placeholder="警告状态">
+  </div>
+  <div class="form-group has-error">
+    <label class="control-label" for="inputError1">错误状态</label>
+    <input type="text" class="form-control" id="inputError1" placeholder="错误状态">
+  </div>
+</form>  
+<br>
+<br>
+<br>
+<h3>示例2</h3>   
+<form role="form">
+  <div class="form-group has-success has-feedback">
+    <label class="control-label" for="inputSuccess1">成功状态</label>
+    <input type="text" class="form-control" id="inputSuccess1" placeholder="成功状态" >
+    <span class="glyphicon glyphicon-ok form-control-feedback"></span>
+  </div>
+  <div class="form-group has-warning has-feedback">
+    <label class="control-label" for="inputWarning1">警告状态</label>
+    <input type="text" class="form-control" id="inputWarning1" placeholder="警告状态">
+    <span class="glyphicon glyphicon-warning-sign form-control-feedback"></span>
+  </div>
+  <div class="form-group has-error has-feedback">
+    <label class="control-label" for="inputError1">错误状态</label>
+    <input type="text" class="form-control" id="inputError1" placeholder="错误状态">
+    <span class="glyphicon glyphicon-remove form-control-feedback"></span>  
+  </div>
+
+</form>
+<p>表单提示信息</p>
+平常在制作表单验证时，要提供不同的提示信息。在Bootstrap框架中也提供了这样的效果。使用了一个"help-block"样式，将提示信息以块状显示，并且显示在控件底部。
+在Bootstrap V2.x版本中还提供了一个行内提示信息，其使用了类名“help-inline”。一般让提示信息显示在控件的后面，也就是同一水平显示。
+如果你不想为bootstrap.css增加自己的代码，而且设计又有这种样的需求，那么只能借助于Bootstrap的网格系统。
+<h3>示例1</h3>
+<form role="form">
+  <div class="form-group has-success has-feedback">
+    <label class="control-label" for="inputSuccess1">成功状态</label>
+    <input type="text" class="form-control" id="inputSuccess1" placeholder="成功状态" >
+    <span class="help-block">你输入的信息是正确的</span>
+    <span class="glyphicon glyphicon-ok form-control-feedback"></span>
+  </div>
+  <div class="form-group has-warning has-feedback">
+    <label class="control-label" for="inputWarning1">警告状态</label>
+    <input type="text" class="form-control" id="inputWarning1" placeholder="警告状态">
+    <span class="help-block">请输入正确信息</span>
+    <span class="glyphicon glyphicon-warning-sign form-control-feedback"></span>
+  </div>
+  <div class="form-group has-error has-feedback">
+    <label class="control-label" for="inputError1">错误状态</label>
+    <input type="text" class="form-control" id="inputError1" placeholder="错误状态">
+    
+    <span class="glyphicon glyphicon-remove form-control-feedback"></span>  
+  </div>
+</form>    
+<br>
+<br>
+<br>
+<h3>示例2</h3>
+<form role="form">
+  <div class="form-group">
+    <label class="control-label" for="inputSuccess1">成功状态</label>
+    <div class="row">
+      <div class="col-xs-6">
+        <input type="text" class="form-control" id="inputSuccess1" placeholder="成功状态" >
+      </div>
+       <span class="col-xs-6 help-block">你输入的信息是正确的</span>
+    </div>
+  </div> 
+</form> 
+<p>按钮详解</p>
+<button class="btn" type="button">基础按钮.btn</button>  
+   <button class="btn btn-default" type="button">默认按钮.btn-default</button> 
+   <button class="btn btn-primary" type="button">主要按钮.btn-primary</button> 
+   <button class="btn btn-success" type="button">成功按钮.btn-success</button> 
+   <button class="btn btn-info" type="button">信息按钮.btn-info</button> 
+   <button class="btn btn-warning" type="button">警告按钮.btn-warning</button> 
+   <button class="btn btn-danger" type="button">危险按钮.btn-danger</button> 
+   <button class="btn btn-link" type="button">链接按钮.btn-link</button> 
+   <p>控制按钮大小</p>
+   <button class="btn btn-primary btn-lg" type="button">大型按钮.btn-lg</button> 
+    <button class="btn btn-primary" type="button">正常按钮</button>
+    <button class="btn btn-primary btn-sm" type="button">小型按钮.btn-sm</button>
+    <p>块状按钮</p>
+    从前面几节的内容中，大家可能发现了，每个示例中的按钮宽度都是依靠按钮文本和padding的值来决定。但有时候在制作按钮的时候需要按钮宽度充满整个父容器（width:100%），特别是在移动端的制作中。那么前面的方法我们都无法很好的实现，除非重新定义按钮的宽度。其实在Bootstrap中并不需要这样做，Bootstrap框架中提供了一个类名“btn-block”。按钮使用这个类名就可以让按钮充满整个容器，并且这个按钮不会有任何的padding和margin值。在实际当中，常把这种按钮称为块状按钮。
+    <button class="btn btn-primary btn-lg btn-block" type="button">大型按钮.btn-lg</button> 
+    <button class="btn btn-primary btn-block" type="button">正常按钮</button>
+    <button class="btn btn-primary btn-sm btn-block" type="button">小型按钮.btn-sm</button>
+    <button class="btn btn-primary btn-xs btn-block" type="button">超小型按钮.btn-xs</button>
+    <p>图像</p>
+    图像在网页制作中也是常要用到的元素，在Bootstrap框架中对于图像的样式风格提供以下几种风格：
+
+1、img-responsive：响应式图片，主要针对于响应式设计
+2、img-rounded：圆角图片
+3、img-circle：圆形图片
+4、img-thumbnail：缩略图片
+<p>图标</p>
+200个icon：
+<span class="glyphicon glyphicon-search"></span>
+    <span class="glyphicon glyphicon-asterisk"></span>
+    <span class="glyphicon glyphicon-plus"></span>
+    <span class="glyphicon glyphicon-cloud"></span>
+    
+    使用方法：在网页中使用图标也非常的简单，在任何内联元素上应用所对应的样式即可：
+    请点击：http://getbootstrap.com/components/#glyphicons 链接查阅或根据bootstrap.css文件第2393行～第2992行查阅。
+    明天继续 第四章，网格系统
+</div>
