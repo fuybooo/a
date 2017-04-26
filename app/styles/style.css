@@ -6,14 +6,17 @@
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
 }
-.nav-header{
+.login-limit-text{
+    -webkit-user-select: none;
+}
+.oa-nav-header{
     color: #F3F3F3;
 }
-.nav-header div{
+.oa-nav-header div{
     height: 50px;
     line-height: 50px;
 }
-.nav-logo{
+.oa-nav-logo{
     background: url(../images/A.png) no-repeat;
     background-size: contain;
     background-position-x: 50px;
@@ -22,4 +25,9 @@
     font-weight: bold;
     letter-spacing: 0.2em;
     -webkit-user-select: none;
+}
+.oa-nav-menu-tree{
+    width: 14%;
+    min-width: 160px;
+    float: left;
 }

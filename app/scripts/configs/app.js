@@ -11,6 +11,7 @@ define(
         /*var angular = require('angular');
          var asyncLoader = require('angular-async-loader');*/
         var app = angular.module('app', ['ui.router', 'ui.load', 'restangular', 'ngSanitize', 'ngAnimate', 'ngTouch', 'ui.bootstrap']);
+        
         //配置APP
         app.config(configure);
         //注入参数

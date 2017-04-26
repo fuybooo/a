@@ -23,7 +23,7 @@ require.config({
         'ECharts': 'vendor/ECharts/echarts-all',
         'bootstrap-datetimepicker': 'vendor/bootstrap-datetimepicker/src/js/bootstrap-datetimepicker',
         'bootstrap-datetimepicker-zh-CN': 'vendor/bootstrap-datetimepicker/src/js/locales/bootstrap-datetimepicker.zh-CN',
-
+        
         // app文件
         'app': 'scripts/configs/app',
         'commonDirective': 'scripts/directives/commonDirective',
@@ -117,7 +117,7 @@ require(
         'angular',
         'jquery',
         'underscore',
-
+        
         'angular-async-loader',
         'angular-ui-load',
         'angular-ui-router',
@@ -126,31 +126,31 @@ require(
         'angular-touch',
         'angular-bootstrap',
         'restangular',
-
+        
         'bootstrap',
         'zTree',
         'ECharts',
-
+        
         'bootstrap-table',
         'bootstrap-select',
         'bootstrap-datetimepicker',
-
+        
         'bootstrap-table-zh-CN',
         'bootstrap-datetimepicker-zh-CN',
-
+        
         'app',
         'commonDirective',
         'commonService',
         'dataService',
         'commonFilter',
         'router',
-
+        
         'require',
         'exports',
         'module'
     ],
-    function(require, exports, module) {
-        angular.element(document).ready(function() {
+    function (require, exports, module) {
+        angular.element(document).ready(function () {
             angular.bootstrap(document, ['app']);
         });
     }

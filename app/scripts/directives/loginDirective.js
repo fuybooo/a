@@ -5,8 +5,7 @@ define(function(require) {
             return {
                 controller: 'LoginController',
                 link: function(scope, ele, attrs) {
-                    scope.loginText = $('.login-limit-text').text();
-                    console.log('limitInputDirective', scope.loginText);
+                    scope.loginText = $('.js-login-limit-text').text();
                     scope.watchCounter = 0;
                     scope.keyUpCounter = 0;
                     scope.$watch('login.loginInput', function(newVal, oldVal) {
