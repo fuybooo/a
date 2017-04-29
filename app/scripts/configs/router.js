@@ -73,7 +73,8 @@ define(function (require) {
                 templateUrl: 'app/views/commonFunction.html',
                 controller: 'CommonFunctionController',
                 dependencies: [
-                    'scripts/controllers/commonFunctionController'
+                    'scripts/controllers/commonFunctionController',
+                    'scripts/directives/commonFunctionDirective'
                 ]
             })
             .state('app.bootstrap', {
@@ -85,20 +86,18 @@ define(function (require) {
     }]);
     
     //用于初始化全局的数据，仅对全局作用域起作用
-    app.run(['$state', '$stateParams', '$rootScope', function ($state, $stateParams, $rootScope) {
-        console.log('app.run')
+    app.run(['$state', '$stateParams', '$rootScope', '$anchorScroll', function ($state, $stateParams, $rootScope, $anchorScroll) {
         $rootScope.$state = $state;
         $rootScope.$stateParams = $stateParams;
         
         $rootScope.$on('$stateChangeStart', function (evt, next, current) {
-            console.log('$stateChangeStart')
-            if(next.name === 'app.oa'){
+            if (next.name === 'app.oa') {
                 $rootScope.layout = {
                     showAppHeader: false,
                     showAppFooter: false,
                     oaShow: true
                 }
-            }else{
+            } else {
                 $rootScope.layout = {
                     showAppHeader: true,
                     showAppFooter: true,
@@ -113,4 +112,5 @@ define(function (require) {
         
         });
     }]);
+    app.constant('baseRequsetUrl', 'app/json/');// 使用constant注册的服务可以在config中使用，而value不可以
 });

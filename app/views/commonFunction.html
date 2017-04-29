@@ -1,3 +1,60 @@
-<div class="navbar navbar-default" role="navigation">
-    CommonFunctionController
-</div>
+<ul class="common-fn-catalog list-unstyled">
+    <li class="fn-catalog-title">目录</li>
+    <li class="fn-catalog-li" ng-repeat="item in catalog" ng-class="{'active': item.active}">
+        <a ng-click="changeAnchor($index)">{{item.name}}</a>
+    </li>
+</ul>
+<ul class="common-fn-example list-unstyled pri15">
+    <li id="table-example" class="fn-example-li">
+        <h3>分页表格示例</h3>
+        <h4>获取人员信息</h4>
+        <div class="query-box">
+            <form class="form-horizontal" role="form" name="table_ex_q_form" novalidate>
+                <div class="form-group">
+                    <label for="table-ex-q-userId" class="col-sm-1 control-label">员工编号</label>
+                    <div class="col-sm-2">
+                        <input type="text" name="userId" ng-model="tableExQ.userId"
+                               class="form-control input-sm" id="table-ex-q-userId">
+                    </div>
+                    <label for="table-ex-q-username" class="col-sm-1 control-label">员工姓名</label>
+                    <div class="col-sm-2">
+                        <input type="text" name="username" ng-model="tableExQ.username"
+                               class="form-control input-sm" id="table-ex-q-username">
+                    </div>
+                    <label for="table-ex-q-userState" class="col-sm-1 control-label">员工状态</label>
+                    <div class="col-sm-2">
+                        <input type="text" name="userState" ng-model="tableExQ.userState"
+                               class="form-control input-sm" id="table-ex-q-userState">
+                    </div>
+                </div>
+                <div class="form-group">
+
+                    <label for="table-ex-q-entryDateStart" class="col-sm-1 control-label">入职时间</label>
+                    <div class="col-sm-4 dif">
+                        <input type="text" name="entryDateStart" ng-model="tableExQ.entryDateStart"
+                               class="form-control input-sm w_46-5" id="table-ex-q-entryDateStart"
+                               placeholder="入职开始时间">
+                        <em class="pl_4"></em>
+                        <input type="text" name="entryDateEnd" ng-model="tableExQ.entryDateEnd"
+                               class="form-control input-sm w_46-5" id="table-ex-q-entryDateEnd"
+                               placeholder="入职结束时间">
+                    </div>
+                    <div class="col-sm-1">
+                        <button class="btn btn-primary btn-block btn-sm" ng-disabled="register_form.$dirty">查询</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div bootstrap-table action="getUsers" data-table-id="table-user">
+        </div>
+    </li>
+    <li id="head-example" class="fn-example-li">
+        <h3>头像上传示例</h3>
+    </li>
+    <li id="pop-example" class="fn-example-li">
+        <h3>弹出层示例</h3>
+    </li>
+    <li id="loading-example" class="fn-example-li">
+        <h3>loading层示例</h3>
+    </li>
+</ul>

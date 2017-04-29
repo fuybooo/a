@@ -1,6 +1,6 @@
 <!--导航部分-->
 <header class="app-header" nav-directive ng-if="layout.showAppHeader"></header>
 <!--内容部分-->
-<section class="app-container" ui-view ng-class="{'h': layout.oaShow, 'home-wrap': layout.homeShow}"></section>
+<section class="app-container h" ui-view ng-class="{'home-wrap': layout.homeShow}"></section>
 <!--底部-->
 <footer class="app-footer" ng-if="layout.showAppFooter"></footer>

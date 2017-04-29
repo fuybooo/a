@@ -1,22 +1,33 @@
-.alert-global-tip{
+.app-header{
+    position: fixed;
+    width: 100%;
+}
+.app-container{
+    padding-top: 70px;
+}
+.alert-global-tip {
     display: none;
     position: absolute;
     top: 20%;
     left: 50%;
     -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
+    transform: translateX(-50%);
 }
-.login-limit-text{
+
+.login-limit-text {
     -webkit-user-select: none;
 }
-.oa-nav-header{
+
+.oa-nav-header {
     color: #F3F3F3;
 }
-.oa-nav-header div{
+
+.oa-nav-header div {
     height: 50px;
     line-height: 50px;
 }
-.oa-nav-logo{
+
+.oa-nav-logo {
     background: url(../images/A.png) no-repeat;
     background-size: contain;
     background-position-x: 50px;
@@ -26,8 +37,64 @@
     letter-spacing: 0.2em;
     -webkit-user-select: none;
 }
-.oa-nav-menu-tree{
+
+.oa-nav-menu-tree {
     width: 14%;
     min-width: 160px;
     float: left;
 }
+
+/* 通用功能  start  */
+.common-fn-catalog {
+    width: 17%;
+    float: left;
+    border-right: 1px solid #1B91F5;
+    color: #1B91F5;
+    position: fixed;
+}
+
+.fn-catalog-title {
+    font-size: 24px;
+    text-align: right;
+    padding: 10px 30px;
+}
+
+.fn-catalog-li {
+    padding: 5px 30px;
+    text-align: right;
+}
+.fn-catalog-li a {
+    color: #1B91F5;
+    cursor: pointer;
+}
+.fn-catalog-li a:hover{
+    text-decoration: none;
+    color: #002a80;
+}
+.fn-catalog-li.active a{
+    color: #002a80;
+}
+.fn-catalog-li.active a:hover{
+    cursor: default;
+}
+.fn-catalog-li:hover:before,
+.fn-catalog-li.active:before,
+.fn-catalog-li.active:hover:before {
+    padding-right: 20px;
+}
+.fn-catalog-li:hover:before {
+    content: url(../images/arrow-right-active.png);
+}
+
+.fn-catalog-li.active:before,
+.fn-catalog-li.active:hover:before {
+    content: url(../images/arrow-right.png);
+}
+
+.common-fn-example {
+    width: 83%;
+    margin-left: 17%;
+    padding-left: 30px;
+}
+
+/* 通用功能  end  */

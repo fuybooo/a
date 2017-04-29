@@ -31,6 +31,10 @@
     display: block;
 }
 
+.dif {
+    display: inline-flex;
+}
+
 .oh {
     overflow: hidden;
 }
@@ -49,21 +53,15 @@
 
 /* css tools */
 
-
 /*  对于数量单位有如下规则   */
-
 
 /*  1.数字单位为px，如w20表示width: 20px;  */
 
-
 /*  2.下划线代表百分比，如w_90表示width: 90%;  */
-
 
 /*  3.中划线代表负值，如w-100表示width: -100px;  */
 
-
 /*  4.综合：w-_100表示width: -100%;  */
-
 
 /*  5.特例：因为比较常用的关系，w表示width: 100%;等等  */
 
@@ -107,6 +105,25 @@
     width: 480px;
 }
 
+.w_40 {
+    width: 40%;
+}
+
+.w_45 {
+    width: 45%;
+}
+/* 46.5% */
+.w_46-5 {
+    width: 46.5%;
+}
+.w_48 {
+    width: 48%;
+}
+
+.w_50 {
+    width: 50%;
+}
+
 .h {
     height: 100%;
 }
@@ -127,12 +144,12 @@
     height: 100px;
 }
 
-
 .t_50 {
     top: 50%;
 }
 
-.r {}
+.r {
+}
 
 .b0 {
     bottom: 0;
@@ -145,13 +162,16 @@
 .mt30 {
     margin-top: 30px;
 }
+
 .mt-35 {
     margin-top: -35px;
 }
 
-.mr {}
+.mr {
+}
 
-.mb {}
+.mb {
+}
 
 .ml100 {
     margin-left: 100px;
@@ -173,10 +193,12 @@
     padding-top: 100px;
 }
 
-
 /* pr已经被占用，这时加上第二个字母以示区分 */
 
-.pri {}
+/* padding-right */
+.pri15 {
+    padding-right: 15px;
+}
 
 .pb40 {
     padding-bottom: 40px;
@@ -184,6 +206,16 @@
 
 .pb50 {
     padding-bottom: 50px;
+}
+
+.pl_3 {
+    padding-left: 3%;
+}
+.pl_4 {
+    padding-left: 4%;
+}
+.pl_10 {
+    padding-left: 10%;
 }
 
 .pl356 {
