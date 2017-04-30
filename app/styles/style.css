@@ -1,6 +1,7 @@
 .app-header{
     position: fixed;
     width: 100%;
+    z-index: 1;
 }
 .app-container{
     padding-top: 70px;
@@ -94,7 +95,16 @@
 .common-fn-example {
     width: 83%;
     margin-left: 17%;
-    padding-left: 30px;
+    padding: 0 30px;
 }
-
+.img.glyphicon{
+    color: #0f0f0f;
+    cursor: pointer;
+}
+.img.glyphicon:hover{
+    color: #9d9d9d;
+}
+.glyphicon + .glyphicon{
+    margin-left: 5px;
+}
 /* 通用功能  end  */

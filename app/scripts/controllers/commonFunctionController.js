@@ -33,6 +33,7 @@ define(function (require) {
             $scope.catalog[index].active = true;
             // $location.hash($scope.catalog[index].id);
             $anchorScroll($scope.catalog[index].id);
-        }
+        };
+        // 控制器中应该只写逻辑,指令中更应该只写DOM操作,调用controller中的逻辑
     });
 });

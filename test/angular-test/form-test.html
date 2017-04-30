@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script src="../../app/vendor/jquery/dist/jquery.js"></script>
+    <script src="../../app/vendor/angular/angular.js"></script>
+    <title>Document</title>
+</head>
+<body>
+<div  ng-controller="AController">
+<form name="form" novalidate>
+    <input type="text" name="input" ng-model="test.input" required>
+    <input type="text" name="input" required value="{{form}}">
+    <input type="text" name="input" required value="{{form.$dirty}}">
+    <input type="text" name="input" required value="{{form.$pristine}}">
+    <!--ng-init 会改变 $dirty-->
+    <button id="test">测试</button>
+</form>
+
+<button ng-disabled="form.$invalid || form.$pristine">测试</button>
+<button ng-click="append()">append</button>
+</div>
+</body>
+<script>
+    angular.module('myApp', [])
+        .controller('AController', function($scope, $compile){
+            $scope.test = {
+                input : 1
+            }
+//            document.getElementById('test').setAttribute('ng-disabled', 'form.$invalid || form.$pristine')
+            $('#test').after(
+//                '<button ng-disabled="form.$invalid || form.$pristine">测试</button>'
+                $compile('<button ng-disabled="form.$invalid || form.$pristine">测试</button>')($scope)
+            ).remove();
+
+            console.log('AController')
+            $scope.clickBtn = function(n){
+                console.log('AController', 'clickBtn', n)
+            }
+
+
+            $scope.append = function(){
+                var a = $(
+                    '<div><input type="text"><span>sss</span></div>'
+                );
+                console.log(a);
+                $('body').append($compile(
+                '<form name="form2" novalidate>' +
+                    '<input type="text" name="input2" ng-model="test2.input" required>' +
+                    '<input type="text" name="input" value="{{form2}}">' +
+                    '<input type="text" name="input" value="{{form}}">' +
+                    '<input type="text" name="input" value="{{test.input}}">' +
+                    '<button ng-disabled="form2.$pristine">测试2</button>'+
+                '</form>'
+                )($scope));
+            }
+        })
+//        .directive('clickDir', function(){
+//            console.log('clickDir')
+//            return {
+//                scope: {
+//                    clickDir: '&'
+//                },
+//                controller: 'AController',
+//                link: function(scope,ele,attrs){
+//                    console.log('clickDir', 'link')
+//                    angular.element(ele).bind('click',function(){
+//                        console.log('clickDir', 'click')
+//                        scope.clickBtn(1);
+//                    });
+//                }
+//            };
+//        })
+    ;
+
+</script>
+</html>

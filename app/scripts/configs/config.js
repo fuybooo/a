@@ -24,12 +24,15 @@ require.config({
         'bootstrap-datetimepicker': 'vendor/bootstrap-datetimepicker/src/js/bootstrap-datetimepicker',
         'bootstrap-datetimepicker-zh-CN': 'vendor/bootstrap-datetimepicker/src/js/locales/bootstrap-datetimepicker.zh-CN',
         
+        
         // app文件
         'app': 'scripts/configs/app',
+        'popupwin': 'vendor/popupwin/popupwin',
         'commonDirective': 'scripts/directives/commonDirective',
         'commonService': 'scripts/services/commonService',
         'commonFilter': 'scripts/filters/commonFilter',
         'dataService': 'scripts/services/dataService',
+        'tableService': 'scripts/services/tableService',
         'router': 'scripts/configs/router'
     },
     shim: {
@@ -139,9 +142,11 @@ require(
         'bootstrap-datetimepicker-zh-CN',
         
         'app',
+        'popupwin',
         'commonDirective',
         'commonService',
         'dataService',
+        'tableService',
         'commonFilter',
         'router',
         

@@ -4,24 +4,24 @@
         <a ng-click="changeAnchor($index)">{{item.name}}</a>
     </li>
 </ul>
-<ul class="common-fn-example list-unstyled pri15">
+<ul class="common-fn-example list-unstyled">
     <li id="table-example" class="fn-example-li">
         <h3>分页表格示例</h3>
         <h4>获取人员信息</h4>
         <div class="query-box">
             <form class="form-horizontal" role="form" name="table_ex_q_form" novalidate>
                 <div class="form-group">
-                    <label for="table-ex-q-userId" class="col-sm-1 control-label">员工编号</label>
+                    <label for="table-ex-q-userId" class="col-sm-1 control-label">人员编号</label>
                     <div class="col-sm-2">
                         <input type="text" name="userId" ng-model="tableExQ.userId"
                                class="form-control input-sm" id="table-ex-q-userId">
                     </div>
-                    <label for="table-ex-q-username" class="col-sm-1 control-label">员工姓名</label>
+                    <label for="table-ex-q-username" class="col-sm-1 control-label">人员姓名</label>
                     <div class="col-sm-2">
                         <input type="text" name="username" ng-model="tableExQ.username"
                                class="form-control input-sm" id="table-ex-q-username">
                     </div>
-                    <label for="table-ex-q-userState" class="col-sm-1 control-label">员工状态</label>
+                    <label for="table-ex-q-userState" class="col-sm-1 control-label">人员状态</label>
                     <div class="col-sm-2">
                         <input type="text" name="userState" ng-model="tableExQ.userState"
                                class="form-control input-sm" id="table-ex-q-userState">
@@ -40,12 +40,13 @@
                                placeholder="入职结束时间">
                     </div>
                     <div class="col-sm-1">
-                        <button class="btn btn-primary btn-block btn-sm" ng-disabled="register_form.$dirty">查询</button>
+                        <button class="btn btn-primary btn-block btn-sm" ng-disabled="table_ex_q_form.$pristine">查询</button>
                     </div>
                 </div>
             </form>
         </div>
-        <div bootstrap-table action="getUsers" data-table-id="table-user">
+        <div bootstrap-table data-url="getUsers">
+            <table></table>
         </div>
     </li>
     <li id="head-example" class="fn-example-li">
